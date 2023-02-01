@@ -17,7 +17,7 @@ public class Watch implements ActionListener {
 	String seconds_str = String.format("%02d", seconds);
 	String minutes_str = String.format("%02d", minutes);
 	String hours_str = String.format("%02d", hours);
-	Timer timer = new Timer(1000,new ActionListener() {
+	Timer timer = new Timer(10,new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			elapsedTime += 1000;
 			seconds = (elapsedTime/1000) %60;
@@ -80,6 +80,7 @@ public class Watch implements ActionListener {
 			else {
 				started=false;
 				startbtn.setText("Start");
+				startbtn.setBackground(Color.green);
 				stop();
 			}
 			

@@ -1,0 +1,12 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+	
+		Test T= new Test();
+		System.out.println(T.hashCode());
+		Test G = T.clone();
+		System.out.println(G);
+	}
+
+}

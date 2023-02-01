@@ -1,0 +1,61 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class Watch implements ActionListener {
+	
+	JFrame frame = new JFrame();
+	JButton startbtn = new JButton("Start");
+	JButton stopbtn = new JButton("Stop");
+	JButton resetbtn = new JButton("Reset");
+	JLabel timeLabel = new JLabel();
+	
+	boolean started = false;
+	int elapsedTime = 0;
+	int seconds = 0;
+	int minutes =0;
+	int hours = 0 ;
+	String seconds_str = String.format("%02d", seconds);
+	String minutes_str = String.format("%02d", minutes);
+	String hours_str = String.format("%02d", hours);
+	
+	Watch(){
+		
+		timeLabel.setText(hours_str+":"+minutes_str+":"+seconds_str);
+		timeLabel.setBounds(50,100,400,100);
+		timeLabel.setFont(new Font("Verdana",Font.PLAIN,36));
+		timeLabel.setBorder(BorderFactory.createEtchedBorder(1));
+		timeLabel.setOpaque(true);
+		timeLabel.setHorizontalAlignment(JTextField.CENTER);
+		
+		startbtn.setBounds(100,180 , 50, 50);
+		startbtn.setFont(new Font("Ink Free",Font.PLAIN,20));
+		startbtn.setFocusable(false);
+		startbtn.addActionListener(this);
+		
+		resetbtn.setBounds(160,180 , 50, 50);
+		resetbtn.setFont(new Font("Ink Free",Font.PLAIN,20));
+		resetbtn.setFocusable(false);
+		resetbtn.addActionListener(this);
+		
+		frame.add(timeLabel);
+		frame.add(startbtn);
+		frame.add(resetbtn);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(500,500);
+		frame.setLayout(null);
+		frame.setVisible(true);
+		
+		
+		
+	}
+	void start() {}
+	void stop() {}
+	void reset() {}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+	
+} 

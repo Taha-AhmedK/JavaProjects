@@ -1,0 +1,22 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class Watch implements ActionListener {
+	
+	JFrame frame = new JFrame();
+	JButton startbtn = new JButton("Start");
+	JButton stopbtn = new JButton("Stop");
+	Watch(){
+		
+	}
+	void start() {}
+	void stop() {}
+	void reset() {}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+	
+} 

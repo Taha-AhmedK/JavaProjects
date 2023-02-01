@@ -1,0 +1,14 @@
+
+public class Test implements Cloneable{
+
+	public static void main(String[] args) {
+	Test T1 = new Test();
+	Test T2 = new Test();
+	T2=T1;
+	System.out.println(T1.hashCode());
+	System.out.println(T2.hashCode());
+	System.out.println(T1.equals(T2));
+	
+	}
+
+}

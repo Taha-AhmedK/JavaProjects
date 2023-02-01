@@ -1,0 +1,44 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class Watch implements ActionListener {
+	
+	JFrame frame = new JFrame();
+	JButton startbtn = new JButton("Start");
+	JButton stopbtn = new JButton("Stop");
+	JButton resetebtn = new JButton("Reset");
+	JLabel timeLabel = new JLabel();
+	
+	boolean started = false;
+	int elapsedTime = 0;
+	int seconds = 0;
+	int minutes =0;
+	int hours = 0 ;
+	String seconds_str = String.format("%02d", seconds);
+	String minutes_str = String.format("%02d", minutes);
+	String hours_str = String.format("%02d", hours);
+	Watch(){
+		
+		timeLabel.setText(hours_str+":"+minutes_str+":"+":"+seconds_str);
+		timeLabel.setBounds(200,400,300,100);
+		
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(640,480);
+		frame.setLayout(null);
+		frame.setVisible(true);
+		
+		
+		
+	}
+	void start() {}
+	void stop() {}
+	void reset() {}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+	
+} 
